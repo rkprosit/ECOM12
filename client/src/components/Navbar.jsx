@@ -21,7 +21,7 @@ export default function Navbar() {
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span></span><span></span><span></span>
           </button>
-          <Link to="/" className="nav-logo">SKINN</Link>
+          <Link to="/" className="nav-logo">SMELL&TOL</Link>
           <div className="nav-icons">
             <Link to="/shop" className="nav-icon-link">Search</Link>
             {user ? (

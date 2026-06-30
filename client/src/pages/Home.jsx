@@ -19,14 +19,15 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
+        <video autoPlay muted loop playsInline poster="https://images.pexels.com/photos/4938275/pexels-photo-4938275.jpeg" className="hero-video">
+          <source src="https://videos.pexels.com/video-files/7815884/7815884-uhd_2732_1440_25fps.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-overlay"></div>
         <div className="hero-content">
           <span className="hero-subtitle">PREMIUM FRAGRANCES</span>
           <h1>Discover Your Signature Scent</h1>
-          <p>Crafted by master perfumers in France. Made for those who appreciate the finer things.</p>
+          <p>Crafted by master perfumers. Made for those who appreciate the finer things.</p>
           <Link to="/shop" className="btn primary large">Explore Collection</Link>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-perfume"></div>
         </div>
       </section>
 
@@ -58,15 +59,18 @@ export default function Home() {
       <section className="section categories-section">
         <h2>Shop by Category</h2>
         <div className="category-grid">
-          <Link to="/shop?gender=male" className="category-card cat-men">
+          <Link to="/shop?gender=male" className="category-card" style={{backgroundImage: 'url(https://images.pexels.com/photos/29805437/pexels-photo-29805437.jpeg)'}}>
+            <div className="cat-overlay"></div>
             <span>For Him</span>
             <p>Explore Men's Collection</p>
           </Link>
-          <Link to="/shop?gender=female" className="category-card cat-women">
+          <Link to="/shop?gender=female" className="category-card" style={{backgroundImage: 'url(https://images.pexels.com/photos/4938275/pexels-photo-4938275.jpeg)'}}>
+            <div className="cat-overlay"></div>
             <span>For Her</span>
             <p>Explore Women's Collection</p>
           </Link>
-          <Link to="/shop?gender=unisex" className="category-card cat-unisex">
+          <Link to="/shop?gender=unisex" className="category-card" style={{backgroundImage: 'url(https://images.pexels.com/photos/8361523/pexels-photo-8361523.jpeg)'}}>
+            <div className="cat-overlay"></div>
             <span>Unisex</span>
             <p>Explore Unisex Collection</p>
           </Link>
@@ -75,7 +79,7 @@ export default function Home() {
 
       <section className="section newsletter-section">
         <div className="newsletter-card">
-          <h2>Join the SKINN Club</h2>
+          <h2>Join the SMELL&TOL Club</h2>
           <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
           <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
             <input type="email" placeholder="Enter your email" required />

@@ -27,7 +27,7 @@ export default function App() {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-col">
-            <h4>SKINN</h4>
+            <h4>SMELL&TOL</h4>
             <p>Premium fragrances crafted by master perfumers. Made for those who appreciate the finer things in life.</p>
           </div>
           <div className="footer-col">
@@ -53,7 +53,7 @@ export default function App() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 SKINN. All rights reserved.</p>
+          <p>&copy; 2026 SMELL&TOL. All rights reserved.</p>
         </div>
       </footer>
     </div>
