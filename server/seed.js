@@ -95,6 +95,36 @@ const products = [
     price: 499, category: 'Fresh', gender: 'unisex', stock: 27,
     image: 'https://images.pexels.com/photos/8361523/pexels-photo-8361523.jpeg',
   },
+  {
+    name: 'Musk Gold',
+    description: 'A seductive blend of white musk, amber, and warm vanilla with a touch of sandalwood. Long-lasting and luxurious.',
+    price: 899, category: 'Musk', gender: 'male', stock: 20,
+    image: 'https://images.pexels.com/photos/18105/pexels-photo-18105.jpeg',
+  },
+  {
+    name: 'Rose Petals',
+    description: 'Hundreds of hand-picked rose petals distilled into a delicate yet intoxicating fragrance with a hint of pear.',
+    price: 749, category: 'Floral', gender: 'female', stock: 25,
+    image: 'https://images.pexels.com/photos/874243/pexels-photo-874243.jpeg',
+  },
+  {
+    name: 'Black Orchid',
+    description: 'Dark orchid blended with blackcurrant, patchouli, and incense. Mysterious and captivating for any occasion.',
+    price: 949, category: 'Oriental', gender: 'unisex', stock: 14,
+    image: 'https://images.pexels.com/photos/2343711/pexels-photo-2343711.jpeg',
+  },
+  {
+    name: 'Mountain Air',
+    description: 'Crisp alpine air with pine, cedarwood, and fresh ozonic notes. Reminds you of a cool mountain morning.',
+    price: 549, category: 'Fresh', gender: 'male', stock: 33,
+    image: 'https://images.pexels.com/photos/3760073/pexels-photo-3760073.jpeg',
+  },
+  {
+    name: 'Honey Suckle',
+    description: 'Sweet honeysuckle nectar with orange blossom, jasmine, and a creamy vanilla base. Sunny and cheerful.',
+    price: 649, category: 'Floral', gender: 'female', stock: 22,
+    image: 'https://images.pexels.com/photos/5057883/pexels-photo-5057883.jpeg',
+  },
 ];
 
 async function seed() {

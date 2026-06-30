@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     axios.get('/api/products').then(({ data }) => {
-      setFeatured(data.slice(0, 4));
+      setFeatured(data.slice(0, 8));
       setMen(data.filter(p => p.gender === 'male').slice(0, 4));
       setWomen(data.filter(p => p.gender === 'female').slice(0, 4));
     }).catch(() => {});
