@@ -20,7 +20,8 @@ export default function Login() {
   };
 
   return (
-    <div className="page auth-page">
+    <div className="auth-page">
+      <div className="auth-bg"></div>
       <div className="auth-card">
         <h2>Welcome Back</h2>
         {error && <p className="error">{error}</p>}

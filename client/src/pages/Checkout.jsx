@@ -66,12 +66,21 @@ export default function Checkout() {
           <h3>Order Summary</h3>
           {cart.map((item) => (
             <div key={item._id} className="checkout-item">
-              <span>{item.name} x{item.quantity}</span>
-              <span>${(item.price * item.quantity).toFixed(2)}</span>
+              <div className="checkout-item-img" style={{ background: `url(${item.image || ''}) center/cover no-repeat`, backgroundColor: '#1a1a2e' }}>
+                {!item.image && <span>✨</span>}
+              </div>
+              <div className="checkout-item-details">
+                <span className="checkout-item-name">{item.name}</span>
+                <span className="checkout-item-qty">Qty: {item.quantity}</span>
+              </div>
+              <span className="checkout-item-price">&#8377;{(item.price * item.quantity).toFixed(2)}</span>
             </div>
           ))}
           <hr />
-          <p><strong>Total: ${cartTotal.toFixed(2)}</strong></p>
+          <div className="checkout-total">
+            <span>Total</span>
+            <span>&#8377;{cartTotal.toFixed(2)}</span>
+          </div>
         </div>
         <form onSubmit={handleSubmit} className="checkout-form">
           <h3>Shipping Details</h3>

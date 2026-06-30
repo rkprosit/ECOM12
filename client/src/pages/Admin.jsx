@@ -85,7 +85,7 @@ export default function Admin() {
           <div className="stat-card"><h3>{stats.totalProducts}</h3><p>Products</p></div>
           <div className="stat-card"><h3>{stats.totalOrders}</h3><p>Orders</p></div>
           <div className="stat-card"><h3>{stats.totalUsers}</h3><p>Users</p></div>
-          <div className="stat-card"><h3>${stats.revenue.toFixed(2)}</h3><p>Revenue</p></div>
+          <div className="stat-card"><h3>&#8377;{stats.revenue.toFixed(2)}</h3><p>Revenue</p></div>
         </div>
       )}
 
@@ -95,7 +95,7 @@ export default function Admin() {
             <h3>{editingId ? 'Edit Product' : 'Add Product'}</h3>
             <input placeholder="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
             <textarea placeholder="Description" value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} required />
-            <input placeholder="Price" type="number" step="0.01" value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} required />
+            <input placeholder="Price (₹)" type="number" step="1" value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })} required />
             <input placeholder="Category (e.g. Floral, Woody)" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })} required />
             <select value={form.gender} onChange={(e) => setForm({ ...form, gender: e.target.value })}>
               <option value="male">Male</option>
@@ -110,7 +110,10 @@ export default function Admin() {
           <div className="admin-list">
             {products.map((p) => (
               <div key={p._id} className="admin-row">
-                <span>{p.name} - ${p.price} ({p.stock} in stock)</span>
+                <div className="admin-product-info">
+                  <div className="admin-prod-img" style={{ background: `url(${p.image || ''}) center/cover no-repeat`, backgroundColor: '#1a1a2e' }}></div>
+                  <span><strong>{p.name}</strong> - &#8377;{p.price} ({p.stock} in stock)</span>
+                </div>
                 <div>
                   <button className="btn small" onClick={() => editProduct(p)}>Edit</button>
                   <button className="btn danger small" onClick={() => deleteProduct(p._id)}>Delete</button>
@@ -126,7 +129,7 @@ export default function Admin() {
           {orders.map((o) => (
             <div key={o._id} className="admin-row">
               <div>
-                <strong>#{o._id.slice(-6)}</strong> - ${o.total} - {o.status} - {o.user?.name || 'N/A'}
+                <strong>#{o._id.slice(-6)}</strong> - &#8377;{o.total} - {o.status} - {o.user?.name || 'N/A'}
               </div>
               <select value={o.status} onChange={(e) => updateOrderStatus(o._id, e.target.value)}>
                 <option value="pending">Pending</option>

@@ -21,7 +21,8 @@ export default function Register() {
   };
 
   return (
-    <div className="page auth-page">
+    <div className="auth-page">
+      <div className="auth-bg"></div>
       <div className="auth-card">
         <h2>Create Account</h2>
         {error && <p className="error">{error}</p>}
